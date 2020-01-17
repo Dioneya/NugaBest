@@ -7,6 +7,62 @@ html{
 body{
     margin: 0;
     padding: 0;
+    background: radial-gradient(109.96% 109.96% at 50% -4.71%, #FFFFFF 0%, #FF87BF 100%); 
+}
+
+
+
+#social-contact{
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    left: 1.4vw;
+}
+
+.phone-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.mail-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1.5vw;
+}
+
+.mail-btn p, .phone-btn p{
+    width: 0;
+    position: absolute;
+    left: 2vw;
+    z-index: -1;
+    text-align: end;
+    margin: 0;
+    font-family: 'Sriracha', cursive;
+    color: white;
+    font-size: 1.4vw;
+    background: rgba(236, 0, 140, 0.5);
+    border-radius: 0px 10px 10px 0px;
+}
+
+p.disable{
+    opacity: 0;
+    transition: 5s;
+    width: 0px;
+}
+
+p.active {
+    opacity: 1;
+    transition: 5s;
+    width: 19.5vw;
+}
+
+#social-contact img{
+    width: 4.3vw;
+    height: 4.3vw;
 }
 
 #header{
@@ -14,7 +70,9 @@ body{
     flex-direction: column;
     align-content: center;
     align-items: center;
-    background: url('img/backgroundheader.png');
+    background-blend-mode: multiply;
+    background-image:url('img/Group1.png');
+       
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -69,7 +127,8 @@ body{
 }
 
 main{
-    background: url('img/background.png');
+    background-blend-mode: multiply;
+    background-image:url('img/Group2.png');
     background-size: cover;
     background-repeat: no-repeat;
     height: 69.5vw;
@@ -92,7 +151,6 @@ main{
     line-height: 4.72vw;
     padding-left: 3.5vw;
     padding-right: 3.5vw;
-    cursor: pointer;
     background: linear-gradient(255.64deg, #A60C54 0%, #D0418A 100%);
     border-radius: 0.65vw;
     border: 0px;

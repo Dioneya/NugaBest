@@ -8,6 +8,16 @@
     <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
 </head>
 <body>
+    <div id="social-contact">
+       <div class="phone-btn">
+           <img src="img/phone.png" class="btn" alt="">
+           <p class="disable">+38-071-321-13-92</p>
+       </div>
+       <div class="mail-btn">
+           <img src="img/mail.png" class="btn" alt="">
+           <p class="disable">Nuga_BestDNR@gmail.com</p>
+       </div>
+    </div>
     <header>
         <div id="header">
             <div class="logo">
@@ -236,6 +246,27 @@ function prevSlide() {
             right.toggleClass('third second');
             left.toggleClass('first third');
         }
+    </script>
+    
+    <script>
+        $('.phone-btn').click(function(){
+           phone(); 
+        });
+        $('.mail-btn').click(function(){
+           mail(); 
+        });
+        
+        function phone(){
+            var phoneIsActive = $('.phone-btn p').hasClass('active');
+            
+            if(phoneIsActive==true){
+                $('.active p').toggleClass('active disable'); 
+            }
+            else{
+                $('.phone-btn p:disable').toggleClass('disable active');
+            }
+        }
+        
     </script>
 </body>
 </html>
