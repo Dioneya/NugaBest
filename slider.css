@@ -1,0 +1,130 @@
+
+#block-for-slider {
+    width: 100%;
+    margin: 0 auto;
+    height: 34.7vw;
+}
+
+#viewport {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-align: center;
+}
+
+#slidewrapper {
+    position: relative;
+    width: calc(100% * 5);
+    -webkit-transition: 2s;
+    -o-transition: 2s;
+    transition: 2s;
+    -webkit-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+    -o-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+    transition-timing-function: cubic-bezier(.67,.01,.23,1);
+}
+
+#slidewrapper, #slidewrapper ul, #slidewrapper li {
+    margin: 0;
+    padding: 0;
+}
+
+.slide {
+    width: calc(100%/5);
+    height: 34.7vw;
+    position: relative;
+    list-style: none;
+    display: inline;
+    float: left;
+}
+
+.slide-img {
+    width: 100%;
+}
+
+#prev-btn, #next-btn{
+    position: absolute;
+    width: 7vw;
+    height: 5.3125vw;
+    top: calc(50% - 1.7vw);
+}
+
+#prev-btn svg{
+    width: 7vw;
+    height: 5.3125vw;
+}
+
+#prev-btn svg:hover{
+    transition: 0.5s;
+    transform: scale(0.9);    
+}
+
+#next-btn svg{
+    width: 7vw;
+    height: 5.3125vw;
+}
+
+#next-btn svg:hover{
+    transition: 0.5s;
+    transform: scale(0.9);
+}
+
+#next-btn svg:hover path{
+    stroke: rgba(209, 0, 96, 1);
+    
+}
+
+#prev-btn svg:hover path{
+    stroke: rgba(209, 0, 96, 1);
+}
+
+#prev-btn:hover, #next-btn:hover {
+    cursor: pointer;
+}
+
+#prev-btn {
+    left: 5vw;
+}
+
+#next-btn {
+    right: 5vw;
+}
+
+.slide:nth-of-type(5) img{
+    width: 65vw;
+    height: 35vw;
+    margin-top: 0.78vw;
+}
+
+.slide-info{
+    position: absolute;
+    top: 2.4vw;
+    font-weight: 100;
+    font-family: 'Gudea', sans-serif;
+    font-size: 2.77vw;
+    color: white;
+    left: 6vw;
+}
+
+.more{
+    position: absolute;
+    left: 85vw;
+    top: 30vw;
+    font-size: 2vw;
+    color: white;
+    font-family: 'Gudea', sans-serif;
+}
+
+a.more{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover .more{
+    color: white;
+}
+
