@@ -20,9 +20,9 @@
 #slidewrapper {
     position: relative;
     width: calc(100% * 5);
-    -webkit-transition: 2s;
-    -o-transition: 2s;
-    transition: 2s;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
     -webkit-transition-timing-function: cubic-bezier(.67,.01,.23,1);
     -o-transition-timing-function: cubic-bezier(.67,.01,.23,1);
     transition-timing-function: cubic-bezier(.67,.01,.23,1);
@@ -128,3 +128,16 @@ a:hover .more{
     color: white;
 }
 
+.fade {
+  
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
