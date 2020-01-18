@@ -9,11 +9,11 @@
 </head>
 <body>
     <div id="social-contact">
-       <div class="phone-btn">
+       <div class="phone-btn disable">
            <img src="img/phone.png" class="btn" alt="">
            <p class="disable">+38-071-321-13-92</p>
        </div>
-       <div class="mail-btn">
+       <div class="mail-btn disable">
            <img src="img/mail.png" class="btn" alt="">
            <p class="disable">Nuga_BestDNR@gmail.com</p>
        </div>
@@ -260,10 +260,21 @@ function prevSlide() {
             var phoneIsActive = $('.phone-btn p').hasClass('active');
             
             if(phoneIsActive==true){
-                $('.active p').toggleClass('active disable'); 
+                $('.phone-btn').toggleClass('active disable'); 
             }
             else{
-                $('.phone-btn p:disable').toggleClass('disable active');
+                $('.phone-btn').toggleClass('disable active');
+            }
+        }
+        
+        function mail(){
+            var phoneIsActive = $('.mail-btn p').hasClass('active');
+            
+            if(phoneIsActive==true){
+                $('.mail-btn').toggleClass('active disable'); 
+            }
+            else{
+                $('.mail-btn').toggleClass('disable active');
             }
         }
         

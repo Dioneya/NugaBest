@@ -48,16 +48,28 @@ body{
     border-radius: 0px 10px 10px 0px;
 }
 
-p.disable{
-    opacity: 0;
-    transition: 5s;
+.disable p{
+    transition-delay: 1s;
+    transition-timing-function: ease;
+    transition: 3s;
     width: 0px;
 }
 
-p.active {
-    opacity: 1;
-    transition: 5s;
+.disable p{
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.active p{
+    transition-timing-function: ease;
+    transition: 3s;
     width: 19.5vw;
+}
+
+.active p{
+    transition-delay: 2s;
+    transition: 1s;
+    opacity: 1;
 }
 
 #social-contact img{
@@ -303,6 +315,11 @@ main{
     left: 67vw;
     order: 6;
     cursor: pointer;
+}
+
+.previous svg, .next svg{
+    width: 4.8vw;
+    height: 3.7vw;
 }
 
 .previous{
