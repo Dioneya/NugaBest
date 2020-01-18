@@ -19,6 +19,11 @@ body{
     left: 1.4vw;
 }
 
+
+.phone-btn img, .mail-btn img{
+    cursor: pointer;
+}
+
 .phone-btn{
     display: flex;
     flex-direction: row;
