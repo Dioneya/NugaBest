@@ -36,10 +36,22 @@
             
         <div id="viewport">
             <ul id="slidewrapper" class="fade">
-                <li class="slide"><img src="https://hsto.org/files/8d4/b19/80d/8d4b1980d48c418090e2c4466d8c06e1.jpg" alt="1" class="slide-img"></li>
-                <li class="slide"><img src="https://hsto.org/files/ef1/3d7/97e/ef13d797e4c642c7a1d4b2b91f7ad7b3.jpg" alt="2" class="slide-img"></li>
-                <li class="slide"><img src="https://hsto.org/files/ec5/592/f1e/ec5592f1e814401eb38305682a8e88d4.jpg" alt="3" class="slide-img"></li>
-                <li class="slide"><img src="https://hsto.org/files/eda/61a/3c5/eda61a3c53db408d820643998d9acd81.jpg" alt="4" class="slide-img"></li>
+                <li class="slide">
+                    <a href="#"><span class="more">Подробнее</span></a>
+                    <img src="https://hsto.org/files/8d4/b19/80d/8d4b1980d48c418090e2c4466d8c06e1.jpg" alt="1" class="slide-img">
+                </li>
+                <li class="slide">
+                    <a href="#"><span class="more">Подробнее</span></a>
+                    <img src="https://hsto.org/files/ef1/3d7/97e/ef13d797e4c642c7a1d4b2b91f7ad7b3.jpg" alt="2" class="slide-img">
+                </li>
+                <li class="slide">
+                    <a href="#"><span class="more">Подробнее</span></a>
+                    <img src="https://hsto.org/files/ec5/592/f1e/ec5592f1e814401eb38305682a8e88d4.jpg" alt="3" class="slide-img">
+                </li>
+                <li class="slide">
+                    <a href="#"><span class="more">Подробнее</span></a>
+                    <img src="https://hsto.org/files/eda/61a/3c5/eda61a3c53db408d820643998d9acd81.jpg" alt="4" class="slide-img">
+                </li>
                 <li class="slide">
                     <a href="#"><span class="more">Подробнее</span></a>
                     <span class="slide-info">Массажная кровать <span class="bold">N5</span> </span>
@@ -150,221 +162,8 @@
             </div>
         </div>
     </footer>
-    <script>
-var slideNow = 1;
-var slideCount = $('#slidewrapper').children().length;
-var slideInterval = 10000;
-var navBtnId = 0;
-var translateWidth = 0;
-
-$(document).ready(function() {
-    var switchInterval = setInterval(nextSlide, slideInterval);
-
-    $('#viewport').hover(function() {
-        clearInterval(switchInterval);
-    }, function() {
-        switchInterval = setInterval(nextSlide, slideInterval);
-    });
-
-    $('#next-btn').click(function() {
-        nextSlide();
-    });
-
-    $('#prev-btn').click(function() {
-        prevSlide();
-    });
-
-    $('.slide-nav-btn').click(function() {
-        navBtnId = $(this).index();
-
-        if (navBtnId + 1 != slideNow) {
-            translateWidth = -$('#viewport').width() * (navBtnId);
-            $('#slidewrapper').css({
-                '-webkit-animation-name': +'fade',
-                '-webkit-animation-duration': 1.5+'s',
-                'animation-name': +'fade',
-                'animation-duration': 1.5+'s',
-                '-webkit-transition': 0+'s',
-                '-o-transition': 0+'s',
-                transition: 0+'s',
-                'transform': 'translate(' + translateWidth + 'px, 0)',
-                '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-                '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-            });
-            slideNow = navBtnId + 1;
-            if (slideNow == 1) {
-                $('#prev-btn').css({
-                    opacity: 0,
-                });
-            }
-            if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
-                $('#next-btn').css({
-                    opacity: 0
-                });
-            }
-            if (slideNow>1){
-                $('#prev-btn').css({
-                    opacity: 1,
-                });
-            }
-            if (slideNow<slideCount){
-                $('#next-btn').css({
-                    opacity: 1,
-                });
-            }
-        }
-        checkActiveBtn();
-    });
-    if (slideNow == 1 || slideNow <= 0 || slideNow > slideCount) {
-        $('#prev-btn').css({
-           opacity: 0
-        });
-    }
-});
-        
-function checkActiveBtn(){
-    var dotCount = navBtnId+1;
-    for(let i = 1; i != slideCount+1; i++){
-        if(i==slideNow){
-            $('.slide-nav-btn:nth-child('+i+')').toggleClass('nav-disable nav-active');
-        }else if(i!=slideNow && $('.slide-nav-btn:nth-child('+i+')').hasClass('nav-disable') ){
-                
-        }
-        else if(i!=slideNow && $('.slide-nav-btn:nth-child('+i+')').hasClass('nav-active')){
-            $('.slide-nav-btn:nth-child('+i+')').toggleClass('nav-active nav-disable ');       
-        }
-    }
-    
-    
-}
-function nextSlide() {
-    if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
-       $('#next-btn').css({
-           opacity: 0
-        });
-    } else {
-        translateWidth = -$('#viewport').width() * (slideNow);
-        $('#slidewrapper').css({
-            'transform': 'translate(' + translateWidth + 'px, 0)',
-            '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-            '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-            '-webkit-transition': 1.5+'s',
-            '-o-transition': 1.5+'s',
-            transition: 1.5+'s',
-        });
-        
-        slideNow++;
-    }
-    if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
-       $('#next-btn').css({
-           opacity: 0,
-        });
-    }
-    
-    if (slideNow>1){
-            $('#prev-btn').css({
-                opacity: 1
-            });
-    }
-    checkActiveBtn();
-}
-
-function prevSlide() {
-    if (slideNow == 1 || slideNow <= 0 || slideNow > slideCount) {
-        $('#prev-btn').css({
-           opacity: 0
-        });
-    } else {
-        translateWidth = -$('#viewport').width() * (slideNow - 2);
-        $('#slidewrapper').css({
-            'transform': 'translate(' + translateWidth + 'px, 0)',
-            '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-            '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-            '-webkit-transition': 1.5+'s',
-            '-o-transition': 1.5+'s',
-            transition: 1.5+'s',
-        });
-        slideNow--;
-    }
-    
-    if (slideNow == 1) {
-       $('#prev-btn').css({
-           opacity: 0,
-        });
-    }
-    
-    if(slideNow < slideCount){
-            $('#next-btn').css({
-                opacity: 1
-            })
-       }
-    checkActiveBtn();
-}
-    </script>
-    <!--////////////////////////////////////////////-->
-    <script>
-        $('.next').click(function() {
-            next();
-        });
-
-        $('.previous').click(function() {
-            prev();
-        });
-        
-        function next(){
-            var main = $('.second');
-            var right = $('.third');
-            var left = $('.first');
-            
-            main.toggleClass('second third');
-            right.toggleClass('third first');
-            left.toggleClass('first second');
-        }
-        
-        function prev(){
-            var main = $('.second');
-            var right = $('.third');
-            var left = $('.first');
-            
-            main.toggleClass('second first');
-            right.toggleClass('third second');
-            left.toggleClass('first third');
-        }
-    </script>
-    
-    <script>
-        $('.phone-btn img').click(function(){
-           phone(); 
-        });
-        $('.mail-btn img').click(function(){
-           mail(); 
-        });
-        
-        function phone(){
-            var phoneIsActive = $('.phone-btn p').hasClass('active');
-            
-            if(phoneIsActive==true){
-                $('.phone-btn').toggleClass('active disable');
-                $('.phone-btn div').toggleClass('text-active text-disable');
-            }
-            else{
-                $('.phone-btn').toggleClass('disable active');
-                $('.phone-btn div').toggleClass('text-disable text-active');
-            }
-        }
-        
-        function mail(){
-            var phoneIsActive = $('.mail-btn p').hasClass('active');
-            
-            if(phoneIsActive==true){
-                $('.mail-btn').toggleClass('active disable'); 
-                $('.mail-btn div').toggleClass('text-active text-disable');
-            }
-            else{
-                $('.mail-btn').toggleClass('disable active');
-                $('.mail-btn div').toggleClass('text-disable text-active');
-            }
-        }
-    </script>
+    <script src="slider.js"></script>
+    <script src="carusel.js"></script>
+    <script src="contact.js"></script>
 </body>
 </html>
