@@ -5,6 +5,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="carousel.css">
     <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
 </head>
 <body>
@@ -37,30 +38,40 @@
         <div id="viewport">
             <ul id="slidewrapper" class="fade">
                 <li class="slide">
-                    <a href="#"><span class="more">Подробнее</span></a>
-                    <img src="https://hsto.org/files/8d4/b19/80d/8d4b1980d48c418090e2c4466d8c06e1.jpg" alt="1" class="slide-img">
+                    <span class="slide-info">Миостимулятор <span class="bold">Е3 </span> </span>
+                    <a href="https://vk.com/@nuga_horlovka-miostimulyator-e3"><span class="more">Подробнее</span></a>
+                    <img src="img/nugabest_e3.png" alt="1" class="slide-img">
                 </li>
                 <li class="slide">
-                    <a href="#"><span class="more">Подробнее</span></a>
-                    <img src="https://hsto.org/files/ef1/3d7/97e/ef13d797e4c642c7a1d4b2b91f7ad7b3.jpg" alt="2" class="slide-img">
+                    <span class="slide-info">Ковёр <span class="bold">Т20</span> </span>
+                    <a href="https://vk.com/@nuga_horlovka-teplyi-son-pri-luboi-pogode"><span class="more">Подробнее</span></a>
+                    <img src="img/Ava_NugaBest.png" alt="2" class="slide-img">
                 </li>
                 <li class="slide">
-                    <a href="#"><span class="more">Подробнее</span></a>
-                    <img src="https://hsto.org/files/ec5/592/f1e/ec5592f1e814401eb38305682a8e88d4.jpg" alt="3" class="slide-img">
+                    <span class="slide-info">Аппарат <span class="bold">NM-55</span> </span>
+                    <a href="https://vk.com/@nuga_horlovka-apparat-vtoroe-serdce"><span class="more">Подробнее</span></a>
+                    <img src="img/secondLife.png" alt="3" class="slide-img">
                 </li>
                 <li class="slide">
-                    <a href="#"><span class="more">Подробнее</span></a>
-                    <img src="https://hsto.org/files/eda/61a/3c5/eda61a3c53db408d820643998d9acd81.jpg" alt="4" class="slide-img">
+                    <span class="slide-info">Турманиевая накидка <span class="bold">MHP-100</span> </span>
+                    <a href="https://vk.com/@nuga_horlovka-teplaya-zaschita-ot-prostudy"><span class="more">Подробнее</span></a>
+                    <img src="img/MNR-100.png" alt="4" class="slide-img">
                 </li>
                 <li class="slide">
-                    <a href="#"><span class="more">Подробнее</span></a>
-                    <span class="slide-info">Массажная кровать <span class="bold">N5</span> </span>
+                    <a href="https://vk.com/@nuga_horlovka-chto-delaet-massazhnaya-krovat"><span class="more">Подробнее</span></a>
+                    <span class="slide-info">Оборудование <span class="bold">NM-5000P</span> </span>
                     <img src="img/slide5.png" alt="5" class="slide-img">
+                </li>
+                <li class="slide">
+                    <a href="https://vk.com/@nuga_horlovka-nosi-teplo-s-soboi"><span class="more">Подробнее</span></a>
+                    <span class="slide-info">Турманиевый пояс <span class="bold">T9</span> </span>
+                    <img src="img/T9.png" alt="5" class="slide-img">
                 </li>
             </ul>
             
             <ul id="nav-btns">
                 <li class="slide-nav-btn nav-active"></li>
+                <li class="slide-nav-btn nav-disable"></li>
                 <li class="slide-nav-btn nav-disable"></li>
                 <li class="slide-nav-btn nav-disable"></li>
                 <li class="slide-nav-btn nav-disable"></li>
@@ -85,55 +96,47 @@
     </div>
     <main>
         <div id="main">
-            <button class="button">О нас</button>
             <div class="line"></div>
-            <div id="content">
-                <div class="info-box first">
-                    <div class="head">
-                        Почему мы?
-                    </div>
-                    <div class="line1"></div>
-                    <div class="discrpition-of-about">  
-                       <div>Мы представители Корейской массажной компании <span class="bold">Nuga Best</span> в городе Горловка, а так же во всей Новороссии. Приглашаем всех, кто хочет быть здоровым на 3 бесплатных массажа.</div>
-                    </div>
-                    <div class="more-info">
-                        <a href="#">Подробнее</a>
-                    </div>
-                </div>
+            <div class="about-us">
                 <div class="previous">
                     <svg width="57" height="76" viewBox="0 0 57 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M54.8889 3L4.4656 38.9351C3.29747 39.7676 3.35964 41.5229 4.58375 42.2706L54.8889 73" stroke="#D10060" stroke-opacity="0.5" stroke-width="7"/>
                     </svg>
                 </div>
-                <div class="box-line"></div>
-                <div class="info-box second">
-                    <div class="head">
-                        Кто мы?
-                    </div>
-                    <div class="line1"></div>
-                    <div class="discrpition-of-about">  
-                       <div>Мы представители Корейской массажной компании <span class="bold">Nuga Best</span> в городе Горловка, а так же во всей Новороссии. Приглашаем всех, кто хочет быть здоровым на 3 бесплатных массажа.</div>
-                    </div>
-                    <div class="more-info">
-                        <a href="#">Подробнее</a>
-                    </div>
+                <div class="carousel-discription">
+                    <span>Информация</span>
                 </div>
-                <div class="box-line second-line"></div>
                 <div class="next">
                     <svg width="57" height="76" viewBox="0 0 57 76" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2.11111 73L52.5344 37.0649C53.7025 36.2324 53.6404 34.4771 52.4163 33.7294L2.11111 3" stroke="#D10060" stroke-opacity="0.5" stroke-width="7"/>
                     </svg>
                 </div>
-                <div class="info-box third">
-                    <div class="head">
-                        Где мы?
-                    </div>
-                    <div class="line1"></div>
+            </div>
+            
+            
+            <div id="content">
+                <div class="info-box first">
                     <div class="discrpition-of-about">  
                        <div>Мы представители Корейской массажной компании <span class="bold">Nuga Best</span> в городе Горловка, а так же во всей Новороссии. Приглашаем всех, кто хочет быть здоровым на 3 бесплатных массажа.</div>
                     </div>
-                    <div class="more-info">
-                        <a href="#">Подробнее</a>
+                </div>
+                
+                
+                <div class="info-box second">
+                    <div class="discrpition-of-about">  
+                       <div>Мы находимся в городе Горловка Донецкая область, по улице проспект Победы 34. Вы также можете заказать нашу продукцю перейдя в нашу группу ВКонтакте или же позвонив по номеру телефона +380713211392 Мы работаем по всей Новороссии!</div>
+                    </div>
+                </div>
+                
+                
+                <div class="info-box third">
+                    <div class="discrpition-of-about">  
+                       <div>Мы представители Корейской массажной компании <span class="bold">Nuga Best</span> в городе Горловка, а так же во всей Новороссии. Приглашаем всех, кто хочет быть здоровым на 3 бесплатных массажа.</div>
+                    </div>
+                </div>
+                <div class="info-box fourth">
+                    <div class="discrpition-of-about">  
+                       <div>Мы представители Корейской массажной компании <span class="bold">Nuga Best</span> в городе Горловка, а так же во всей Новороссии. Приглашаем всех, кто хочет быть здоровым на 3 бесплатных массажа.</div>
                     </div>
                 </div>
             </div>

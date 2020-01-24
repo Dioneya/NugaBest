@@ -1,6 +1,6 @@
 var slideNow = 1;
 var slideCount = $('#slidewrapper').children().length;
-var slideInterval = 5000;
+var slideInterval = 10000;
 var navBtnId = 0;
 var translateWidth = 0;
 
@@ -74,8 +74,8 @@ function checkActiveBtn(){
     var dotCount = navBtnId+1;
     for(let i = 1; i != slideCount+1; i++){
         if(i==slideNow){
-            if(slideNow >= slideCount &&  $('.slide-nav-btn:nth-child(5)').hasClass('nav-disable')){
-                $('.slide-nav-btn:nth-child(5)').toggleClass('nav-disable nav-active');  
+            if(slideNow >= slideCount &&  $('.slide-nav-btn:nth-child(6)').hasClass('nav-disable')){
+                $('.slide-nav-btn:nth-child(6)').toggleClass('nav-disable nav-active');  
             }else if(slideNow >= slideCount &&  $('.slide-nav-btn:nth-child(5)').hasClass('nav-active')){
         
             }else{
@@ -91,11 +91,11 @@ function checkActiveBtn(){
         else if(i!=slideNow && $('.slide-nav-btn:nth-child('+i+')').hasClass('nav-active')){
             $('.slide-nav-btn:nth-child('+i+')').toggleClass('nav-active nav-disable '); 
         }
-        else if(slideNow > slideCount &&  $('.slide-nav-btn:nth-child(5)').hasClass('nav-disable')){
+        else if(slideNow > slideCount &&  $('.slide-nav-btn:nth-child(6)').hasClass('nav-disable')){
             $('.slide-nav-btn:nth-child(5)').toggleClass('nav-disable nav-active');  
         }
         
-        else if(slideNow > slideCount &&  $('.slide-nav-btn:nth-child(5)').hasClass('nav-active')){
+        else if(slideNow > slideCount &&  $('.slide-nav-btn:nth-child(6)').hasClass('nav-active')){
         
         }
     }
